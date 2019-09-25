@@ -21,7 +21,7 @@ class Test_LoginFlow:
     @staticmethod
     def invoke_browser(self):
 
-        deployment_Type = "clouding"
+        deployment_Type = "cloud"
         deployment_Environment = "osx"
         browser = "chrome"
         remote_Machine = 'http://localhost:4444/wd/hub'
