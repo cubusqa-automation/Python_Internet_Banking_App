@@ -24,7 +24,7 @@ class Test_LoginFlow:
         deployment_Type = "cloud"
         deployment_Environment = "osx"
         browser = "chrome"
-        remote_Machine = 'http://localhost:4444/wd/hub'
+        remote_Machine = 'http://192.168.2.7:4444/wd/hub'
 
         logging.info(
             "Started:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
