@@ -24,17 +24,18 @@ class Test_Retrieve_UserName:
     @staticmethod
     def invoke_browser(self):
 
-        deployment_Type = "cloud"
+        deployment_Type = "local"
         deployment_Environment = "osx"
         browser = "chrome"
         remote_Machine = 'http://192.168.200.126:4444/wd/hub'
         #remote_Machine = 'http://192.168.200.197:4444/wd/hub'
 
-        logging.info("Started:Internet Banking Retrieve UserName Flow. FileName: Retrieve_UserName_test.py, ClassName:Test_Retrieve_UserName, TestName:test_Retrieve_UserName")
+        logging.info(
+            "Started:Internet Banking Reset Password Flow. FileName: Rest_Password_test.py, ClassName:Test_Reset_Password, TestName:test_Rest_Password")
 
         if deployment_Type == "cloud":
             if deployment_Environment == "osx":
-              if browser == "chrome":
+                if browser == "chrome":
                     options = webdriver.ChromeOptions()
                     options.add_argument("--ignore-certificate-errors")
                     options.add_argument("--ignore-ssl-errors")
