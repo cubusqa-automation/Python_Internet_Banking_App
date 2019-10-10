@@ -24,7 +24,7 @@ class Test_Retrieve_UserName:
     @staticmethod
     def invoke_browser(self):
 
-        deployment_Type = "local"
+        deployment_Type = "cloud"
         deployment_Environment = "osx"
         browser = "chrome"
         remote_Machine = 'http://192.168.200.126:4444/wd/hub'
