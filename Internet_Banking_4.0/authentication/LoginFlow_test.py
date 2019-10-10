@@ -24,7 +24,7 @@ class Test_LoginFlow:
         deployment_Type = "cloud"
         deployment_Environment = "osx"
         browser = "chrome"
-        remote_Machine = 'http://192.168.2.23:4444/wd/hub'
+        remote_Machine = 'http://192.168.200.126:4444/wd/hub'
         #remote_Machine = 'http://192.168.200.197:4444/wd/hub'
 
         logging.info(

@@ -27,7 +27,7 @@ class Test_Retrieve_UserName:
         deployment_Type = "cloud"
         deployment_Environment = "osx"
         browser = "chrome"
-        remote_Machine = 'http://192.168.2.23:4444/wd/hub'
+        remote_Machine = 'http://192.168.200.126:4444/wd/hub'
         #remote_Machine = 'http://192.168.200.197:4444/wd/hub'
 
         logging.info("Started:Internet Banking Retrieve UserName Flow. FileName: Retrieve_UserName_test.py, ClassName:Test_Retrieve_UserName, TestName:test_Retrieve_UserName")
