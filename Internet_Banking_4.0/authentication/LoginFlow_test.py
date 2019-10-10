@@ -175,7 +175,7 @@ class Test_LoginFlow:
             time.sleep(10)
             self.driver.find_element_by_xpath(
                 "/html[1]/body[1]/form[1]/div[3]/main[1]/div[1]/header[1]/div[1]/a[3]").click()
-            time.sleep(5)
+            time.sleep(7)
 
         except Exception as e:
             logging.error("ERROR: Issue in --test_LoginFlow() Method.--", e)
