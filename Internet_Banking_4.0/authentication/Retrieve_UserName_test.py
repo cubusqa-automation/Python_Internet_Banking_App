@@ -34,7 +34,7 @@ class Test_Retrieve_UserName:
 
         if deployment_Type == "cloud":
             if deployment_Environment == "osx":
-                if browser == "chrome":
+              if browser == "chrome":
                     options = webdriver.ChromeOptions()
                     options.add_argument("--ignore-certificate-errors")
                     options.add_argument("--ignore-ssl-errors")
