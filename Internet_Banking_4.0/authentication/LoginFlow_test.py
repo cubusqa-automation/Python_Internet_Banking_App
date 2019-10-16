@@ -25,7 +25,6 @@ class Test_LoginFlow:
         deployment_Environment = "osx"
         browser = "chrome"
         remote_Machine = 'http://192.168.200.126:4444/wd/hub'
-        # remote_Machine = 'http://192.168.200.197:4444/wd/hub'
 
         logging.info(
             "Started:Internet Banking Reset Password Flow. FileName: Rest_Password_test.py, ClassName:Test_Reset_Password, TestName:test_Rest_Password")
