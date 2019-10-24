@@ -1,6 +1,6 @@
 FROM python:3.8
 MAINTAINER Vijay.J <vijayjeyaram@gmail.com>
-COPY . ./Mobile_Internet_Banking
+COPY . /Mobile_Internet_Banking/
 ADD requirements.txt /Mobile_Internet_Banking/requirements.txt
 RUN pip install -r /Mobile_Internet_Banking/requirements.txt
 WORKDIR /Mobile_Internet_Banking/authentication
