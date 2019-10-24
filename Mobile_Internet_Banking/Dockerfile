@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.8
 MAINTAINER Vijay.J <vijayjeyaram@gmail.com>
 COPY . /Internet_Banking_4.0
 ADD requirements.txt /Mobile_Internet_Banking/requirements.txt
