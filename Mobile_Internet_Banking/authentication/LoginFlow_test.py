@@ -33,7 +33,7 @@ class Test_LoginFlow:
         test_data = TestData()
         general_data = test_data.get_general_test_data()
 
-        logging.info("Started:Internet Banking Reset Password Flow. FileName: Rest_Password_test.py, ClassName:Test_Reset_Password, TestName:test_Rest_Password")
+        logging.info("Start:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
         if general_data.deployment_Type == "cloud":
             if general_data.deployment_Environment == "osx":
                 if general_data.mobile_Browser == "chrome":
@@ -164,7 +164,7 @@ class Test_LoginFlow:
     @staticmethod
     def close_browser(self):
         self.driver.close()
-        logging.info("Ended:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
+        logging.info("End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
 
 
     def test_LoginFlow(self, startup):
