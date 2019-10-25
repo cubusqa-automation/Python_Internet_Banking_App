@@ -5,10 +5,11 @@ import logging
 import time
 
 sys.path.insert(0, os.path.join(os.getcwd(), '..', '..'))
+#sys.path.insert(0, "../helper")
+#sys.path.insert(1, "../Object_Repository")
 
 from Mobile_Internet_Banking.helper.TestData import TestData
-from Mobile_Internet_Banking.Object_Repository.Mobile_Object_Repository import Mobile_SignIn, Mobile_Common, \
-    Mobile_Dashboard
+from Mobile_Internet_Banking.Object_Repository.Mobile_Object_Repository import *
 from selenium import webdriver
 
 
