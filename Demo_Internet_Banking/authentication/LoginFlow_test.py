@@ -4,18 +4,12 @@ import pytest
 import logging
 import time
 
-#sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 sys.path.insert(0, os.path.join(os.getcwd(), '..', '..'))
-#sys.path.append('./authentication')
-#sys.path.insert(0, os.path.join(os.getcwd(), 'authentication'))
-#sys.path.insert(0, os.path.join(os.getcwd(), 'helper'))
-#sys.path.insert(0, os.path.join(os.getcwd(), 'Browser_Drivers'))
 
-
-from Mobile_Internet_Banking.helper.TestData import TestData
-from Mobile_Internet_Banking.Object_Repository.Mobile_Object_Repository import *
 from selenium import webdriver
 
+from Demo_Internet_Banking.authentication.Mobile_Object_Repository import *
+from Demo_Internet_Banking.authentication.TestData import *
 
 """
 logging.basicConfig(
