@@ -103,6 +103,7 @@ class Test_Retrieve_UserName:
                     options.add_argument("--ignore-certificate-errors")
                     options.add_argument("--ignore-ssl-errors")
                     options.add_experimental_option("detach", True)
+                    options.add_experimental_option("detach", True)
                     self.driver = webdriver.Chrome(options=options,
                                                    executable_path="../Browser_Drivers/OSX/chromedriver")
                     logging.debug("On Premise-OSX-Chrome Browser has been launched.")

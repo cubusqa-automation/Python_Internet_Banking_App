@@ -1,4 +1,0 @@
-pytest==5.2.1
-selenium==3.141.0
-pymongo==3.9.0
-
