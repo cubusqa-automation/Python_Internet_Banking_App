@@ -17,11 +17,13 @@ from Mobile_Internet_Banking.Object_Repository.Mobile_Object_Repository import *
 from selenium import webdriver
 
 
-
+"""
 logging.basicConfig(
     filename="../Logs/Authentication.log",
     format='%(asctime)s: %(levelname)s: %(message)s',
     level=logging.DEBUG)
+"""
+
 
 
 class Test_LoginFlow:
@@ -49,7 +51,7 @@ class Test_LoginFlow:
                     self.driver = webdriver.Remote(command_executor=general_data.remote_Machine,
                                                    desired_capabilities={'browserName': 'chrome',
                                                                          'javascriptEnabled': True})
-                    logging.debug("Cloud-OSX-Chrome Browser has been launched.")
+                    #logging.debug("Cloud-OSX-Chrome Browser has been launched.")
 
                 else:  # firefox
                     options = webdriver.FirefoxOptions()
@@ -59,7 +61,7 @@ class Test_LoginFlow:
                     self.driver = webdriver.Remote(command_executor=general_data.remote_Machine,
                                                    desired_capabilities={'browserName': 'firefox',
                                                                          'javascriptEnabled': True})
-                    logging.debug("Cloud-OSX-Firefox Browser has been launched.")
+                    #logging.debug("Cloud-OSX-Firefox Browser has been launched.")
 
             elif general_data.deployment_Environment == "linux":
                 if general_data.mobile_Browser == "chrome":
@@ -70,7 +72,7 @@ class Test_LoginFlow:
                     self.driver = webdriver.Remote(command_executor=general_data.remote_Machine,
                                                    desired_capabilities={'browserName': 'chrome',
                                                                          'javascriptEnabled': True})
-                    logging.debug("Cloud-Linux-Chrome Browser has been launched.")
+                    #logging.debug("Cloud-Linux-Chrome Browser has been launched.")
 
                 else:  # firefox
                     options = webdriver.FirefoxOptions()
@@ -80,7 +82,7 @@ class Test_LoginFlow:
                     self.driver = webdriver.Remote(command_executor=general_data.remote_Machine,
                                                    desired_capabilities={'browserName': 'firefox',
                                                                          'javascriptEnabled': True})
-                    logging.debug("Cloud-Linux-Firefox Browser has been launched.")
+                    #logging.debug("Cloud-Linux-Firefox Browser has been launched.")
 
             else:  # windows
                 if general_data.mobile_Browser == "chrome":
@@ -91,7 +93,7 @@ class Test_LoginFlow:
                     self.driver = webdriver.Remote(command_executor=general_data.remote_Machine,
                                                    desired_capabilities={'browserName': 'chrome',
                                                                          'javascriptEnabled': True})
-                    logging.debug("Cloud-Windows-Chrome Browser has been launched.")
+                    #logging.debug("Cloud-Windows-Chrome Browser has been launched.")
 
                 else:  # firefox
                     options = webdriver.FirefoxOptions()
@@ -101,7 +103,7 @@ class Test_LoginFlow:
                     self.driver = webdriver.Remote(command_executor=general_data.remote_Machine,
                                                    desired_capabilities={'browserName': 'firefox',
                                                                          'javascriptEnabled': True})
-                    logging.debug("Cloud-Windows-Firefox Browser has been launched.")
+                    #logging.debug("Cloud-Windows-Firefox Browser has been launched.")
 
         else:  # on premise
             if general_data.deployment_Environment == "osx":
@@ -112,7 +114,7 @@ class Test_LoginFlow:
                     options.add_experimental_option("detach", True)
                     self.driver = webdriver.Chrome(options=options,
                                                    executable_path="../Browser_Drivers/OSX/chromedriver")
-                    logging.debug("On Premise-OSX-Chrome Browser has been launched.")
+                    #logging.debug("On Premise-OSX-Chrome Browser has been launched.")
 
                 else:  # firefox
                     options = webdriver.FirefoxOptions()
@@ -121,7 +123,7 @@ class Test_LoginFlow:
                     # options.add_experimental_option("detach", True)
                     self.driver = webdriver.Chrome(options=options,
                                                    executable_path="../Browser_Drivers/OSX/geckodriver")
-                    logging.debug("On Premise-OSX-Firefox Browser has been launched.")
+                    #logging.debug("On Premise-OSX-Firefox Browser has been launched.")
 
             elif general_data.deployment_Environment == "linux":
                 if general_data.mobile_Browser == "chrome":
@@ -131,7 +133,7 @@ class Test_LoginFlow:
                     options.add_experimental_option("detach", True)
                     self.driver = webdriver.Chrome(options=options,
                                                    executable_path="../Browser_Drivers/Linux/chromedriver")
-                    logging.debug("On Premise-Linux-Chrome Browser has been launched.")
+                    #logging.debug("On Premise-Linux-Chrome Browser has been launched.")
 
                 else:  # firefox
                     options = webdriver.FirefoxOptions()
@@ -150,7 +152,7 @@ class Test_LoginFlow:
                     options.add_experimental_option("detach", True)
                     self.driver = webdriver.Chrome(options=options,
                                                    executable_path="../Browser_Drivers/Windows/chromedriver.exe")
-                    logging.debug("On Premise-Windows-Chrome Browser has been launched.")
+                    #logging.debug("On Premise-Windows-Chrome Browser has been launched.")
 
                 else:  # firefox
                     options = webdriver.FirefoxOptions()
@@ -159,17 +161,17 @@ class Test_LoginFlow:
                     # options.add_experimental_option("detach", True)
                     self.driver = webdriver.Chrome(options=options,
                                                    executable_path="../Browser_Drivers/Windows/geckodriver.exe")
-                    logging.debug("On Premise-Windows-Firefox Browser has been launched.")
+                    #logging.debug("On Premise-Windows-Firefox Browser has been launched.")
 
         self.driver.maximize_window()
         self.driver.get(general_data.mobile_URL)
-        logging.debug("Internet Banking URL has been passed to the browser.")
+        #logging.debug("Internet Banking URL has been passed to the browser.")
         time.sleep(5)
 
     @staticmethod
     def close_browser(self):
         self.driver.close()
-        logging.info("End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
+        #logging.info("End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
 
 
     def test_LoginFlow(self, startup):
@@ -188,4 +190,5 @@ class Test_LoginFlow:
             mobile_dashboard.click_logout_btn()
 
         except Exception as e:
-            logging.error("ERROR: Issue in --test_LoginFlow() Method.--", e)
+            print("ERROR: Issue in --test_LoginFlow() Method.--", e)
+            #logging.error("ERROR: Issue in --test_LoginFlow() Method.--", e)
