@@ -692,3 +692,55 @@
 2019-11-04 15:37:18,046: DEBUG: http://127.0.0.1:49518 "DELETE /session/5255752d22d3e850002ce85ff7acac39/window HTTP/1.1" 200 12
 2019-11-04 15:37:18,047: DEBUG: Finished Request
 2019-11-04 15:37:18,048: INFO: End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow
+2019-11-04 16:28:07,648: INFO: Start:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow
+2019-11-04 16:28:07,657: DEBUG: POST http://192.168.200.126:4444/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome"}}, "desiredCapabilities": {"browserName": "chrome", "javascriptEnabled": true}}
+2019-11-04 16:28:07,659: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:28:09,457: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session HTTP/1.1" 200 951
+2019-11-04 16:28:09,458: DEBUG: Finished Request
+2019-11-04 16:28:09,458: DEBUG: Cloud-OSX-Chrome Browser has been launched.
+2019-11-04 16:28:09,459: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/window/maximize {}
+2019-11-04 16:28:09,460: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:28:09,586: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/window/maximize HTTP/1.1" 200 50
+2019-11-04 16:28:09,587: DEBUG: Finished Request
+2019-11-04 16:28:09,588: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/url {"url": "https://mobile.qa.cubusbank.com/Mobile/Authentication/SignIn.aspx"}
+2019-11-04 16:28:09,588: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:28:43,555: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/url HTTP/1.1" 200 14
+2019-11-04 16:28:43,556: DEBUG: Finished Request
+2019-11-04 16:28:43,556: DEBUG: Internet Banking URL has been passed to the browser.
+2019-11-04 16:28:52,774: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Textbox_UserName']"}
+2019-11-04 16:28:52,776: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:28:52,834: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element HTTP/1.1" 200 88
+2019-11-04 16:28:52,835: DEBUG: Finished Request
+2019-11-04 16:28:52,835: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element/6962d3a6-697b-4e84-9327-aca9397cc46b/value {"text": "Test24", "value": ["T", "e", "s", "t", "2", "4"], "id": "6962d3a6-697b-4e84-9327-aca9397cc46b"}
+2019-11-04 16:28:52,836: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:28:52,905: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element/6962d3a6-697b-4e84-9327-aca9397cc46b/value HTTP/1.1" 200 14
+2019-11-04 16:28:52,906: DEBUG: Finished Request
+2019-11-04 16:28:52,906: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Text_Password']"}
+2019-11-04 16:28:52,907: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:28:52,935: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element HTTP/1.1" 200 88
+2019-11-04 16:28:52,935: DEBUG: Finished Request
+2019-11-04 16:28:52,936: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element/2c29f962-efa3-4830-ba6d-63af332adae4/value {"text": "Test@24", "value": ["T", "e", "s", "t", "@", "2", "4"], "id": "2c29f962-efa3-4830-ba6d-63af332adae4"}
+2019-11-04 16:28:52,937: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:28:53,029: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element/2c29f962-efa3-4830-ba6d-63af332adae4/value HTTP/1.1" 200 14
+2019-11-04 16:28:53,030: DEBUG: Finished Request
+2019-11-04 16:29:03,033: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Button_DummySubmit']"}
+2019-11-04 16:29:03,034: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:29:03,073: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element HTTP/1.1" 200 88
+2019-11-04 16:29:03,074: DEBUG: Finished Request
+2019-11-04 16:29:03,074: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element/d140df0d-efe1-4fa3-a116-7dd19dffd58e/click {"id": "d140df0d-efe1-4fa3-a116-7dd19dffd58e"}
+2019-11-04 16:29:03,075: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:29:03,156: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element/d140df0d-efe1-4fa3-a116-7dd19dffd58e/click HTTP/1.1" 200 14
+2019-11-04 16:29:03,157: DEBUG: Finished Request
+2019-11-04 16:29:10,163: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element {"using": "xpath", "value": "/html[1]/body[1]/form[1]/div[3]/main[1]/div[1]/header[1]/div[1]/a[3]"}
+2019-11-04 16:29:10,163: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:29:17,037: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element HTTP/1.1" 200 88
+2019-11-04 16:29:17,038: DEBUG: Finished Request
+2019-11-04 16:29:17,039: DEBUG: POST http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element/87ead9cd-d118-497c-94b4-95dba83669d9/click {"id": "87ead9cd-d118-497c-94b4-95dba83669d9"}
+2019-11-04 16:29:17,040: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:29:19,807: DEBUG: http://192.168.200.126:4444 "POST /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/element/87ead9cd-d118-497c-94b4-95dba83669d9/click HTTP/1.1" 200 14
+2019-11-04 16:29:19,807: DEBUG: Finished Request
+2019-11-04 16:29:19,809: DEBUG: DELETE http://192.168.200.126:4444/wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/window {}
+2019-11-04 16:29:19,810: DEBUG: Starting new HTTP connection (1): 192.168.200.126:4444
+2019-11-04 16:29:19,943: DEBUG: http://192.168.200.126:4444 "DELETE /wd/hub/session/38c2b1b2e26797e3ad7f888a739132be/window HTTP/1.1" 200 14
+2019-11-04 16:29:19,944: DEBUG: Finished Request
+2019-11-04 16:29:19,944: INFO: End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow
