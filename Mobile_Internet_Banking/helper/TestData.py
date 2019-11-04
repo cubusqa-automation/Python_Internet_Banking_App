@@ -1,7 +1,5 @@
-import ssl
-
 import pymongo
-import pytest
+import os
 
 from Mobile_Internet_Banking.helper.TestData_Properties import General_Properties, Authentication_Properties
 
