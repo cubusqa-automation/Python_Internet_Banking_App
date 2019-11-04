@@ -1,8 +1,8 @@
-FROM python:3.7
+FROM python:3.8
 MAINTAINER Vijay.J <vijayjeyaram@gmail.com>
-COPY . /Mobile_Internet_Banking
-ADD requirements.txt /Mobile_Internet_Banking/requirements.txt
-RUN pip install -r /Mobile_Internet_Banking/requirements.txt
-WORKDIR /Mobile_Internet_Banking/authentication
+COPY . /Demo_Internet_Banking
+ADD requirements.txt /Demo_Internet_Banking/requirements.txt
+RUN pip install -r /Demo_Internet_Banking/requirements.txt
+WORKDIR /Demo_Internet_Banking/authentication
 ENTRYPOINT ["pytest"]
 CMD ["-v"]
