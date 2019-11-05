@@ -4,7 +4,7 @@ import pytest
 import logging
 import time
 
-sys.path.insert(0, os.path.join(os.getcwd(), '..', '..'))
+sys.path.insert(0, os.path.join(os.getcwd(), '..', '..', '..'))
 
 from selenium import webdriver
 
