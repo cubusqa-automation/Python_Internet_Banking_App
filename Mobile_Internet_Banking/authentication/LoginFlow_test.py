@@ -5,7 +5,8 @@ import logging
 import time
 
 #sys.path.insert(0, os.path.join(os.getcwd(), '..', '..', '..'))
-sys.path.insert(0, os.path.join(os.getcwd(), '..', '..'))
+sys.path.extend(["/var/lib/jenkins/workspace/QA_Mobile_Automation/Mobile_Internet_Banking/authentication"])
+#sys.path.insert(0, os.path.join(os.getcwd(), '..', '..'))
 
 from Mobile_Internet_Banking.helper.TestData import *
 from Mobile_Internet_Banking.Object_Repository.Mobile_Object_Repository import *
