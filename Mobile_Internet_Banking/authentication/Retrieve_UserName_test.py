@@ -15,8 +15,7 @@ logging.basicConfig(
     format='%(asctime)s: %(levelname)s: %(message)s',
     level=logging.DEBUG)
 
-
-class Test_LoginFlow:
+class Test_Retrieve_UserName:
     driver = None
 
     @pytest.yield_fixture()
@@ -30,7 +29,7 @@ class Test_LoginFlow:
         test_data = TestData()
         general_data = test_data.get_general_test_data()
 
-        logging.info("Start:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
+        logging.info("Start:Internet Banking Retrieve User Name Flow. FileName: Retrieve_UserName_test.py, ClassName:Test_Retrieve_UserName, TestName:test_Retrieve_UserName")
         if general_data.deployment_Type == "cloud":
             if general_data.deployment_Environment == "osx":
                 if general_data.mobile_Browser == "chrome":
@@ -156,28 +155,46 @@ class Test_LoginFlow:
         self.driver.maximize_window()
         self.driver.get(general_data.mobile_URL)
         logging.debug("Internet Banking URL has been passed to the browser.")
-        time.sleep(10)
+        time.sleep(5)
 
     @staticmethod
     def close_browser(self):
         self.driver.close()
-        logging.info("End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
+        logging.info("End:Internet Banking Retrieve User Name Flow. FileName: Retrieve_UserName_test.py, ClassName:Test_Retrieve_UserName, TestName:test_Retrieve_UserName")
 
-    def test_LoginFlow(self, startup):
+    def test_Retrieve_UserName(self, startup):
 
         try:
             test_Login_data = TestData()
             login_data = test_Login_data.get_authentication_test_data()
 
             mobile_signIn_screen = Mobile_SignIn(self.driver)
-            mobile_signIn_screen.combined_user_name_password_enabled(login_data.loginFlow_UserName,
-                                                                     login_data.loginFlow_Password)
+            mobile_signIn_screen.click_retrieve_user_name_link()
+
             time.sleep(10)
 
-            mobile_dashboard = Mobile_Dashboard(self.driver)
-            mobile_dashboard.click_logout_btn()
+            mobile_retrieve_user_name = Mobile_ForgotUsername(self.driver)
+            mobile_retrieve_user_name.enter_retrieve_user_name_captcha(login_data.retrieveUserName_MemberNo, "valid captcha")
+
+            time.sleep(10)
+
+            mobile_common = Mobile_Common(self.driver)
+            mobile_common.click_submit_btn()
+
+            time.sleep(10)
+
+            retrieve_user_name_password = Mobile_RetrieveUsernamePasswordVerify(self.driver)
+            retrieve_user_name_password.enter_retrieve_user_name_password(login_data.retrieveUserName_Password)
+
+            time.sleep(10)
+
+            mobile_common = Mobile_Common(self.driver)
+            mobile_common.click_submit_btn()
 
             time.sleep(10)
 
         except Exception as e:
-            logging.error("ERROR: Issue in --test_LoginFlow() Method.--", e)
+            logging.error("ERROR: Issue in --test_Retrieve_UserName() Method.--", e)
+
+
+

@@ -16,7 +16,7 @@ logging.basicConfig(
     level=logging.DEBUG)
 
 
-class Test_LoginFlow:
+class Test_Reset_Password:
     driver = None
 
     @pytest.yield_fixture()
@@ -30,7 +30,8 @@ class Test_LoginFlow:
         test_data = TestData()
         general_data = test_data.get_general_test_data()
 
-        logging.info("Start:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
+        logging.info(
+            "Start:Internet Banking Reset Password Flow. FileName: Reset_Password.py, ClassName:Test_Reset_Password, TestName:test_Rest_Password")
         if general_data.deployment_Type == "cloud":
             if general_data.deployment_Environment == "osx":
                 if general_data.mobile_Browser == "chrome":
@@ -47,7 +48,7 @@ class Test_LoginFlow:
                     options = webdriver.FirefoxOptions()
                     options.add_argument("--ignore-certificate-errors")
                     options.add_argument("--ignore-ssl-errors")
-                    #options.add_experimental_option("detach", True)
+                    # options.add_experimental_option("detach", True)
                     self.driver = webdriver.Remote(command_executor=general_data.remote_Machine,
                                                    desired_capabilities={'browserName': 'firefox',
                                                                          'javascriptEnabled': True})
@@ -68,7 +69,7 @@ class Test_LoginFlow:
                     options = webdriver.FirefoxOptions()
                     options.add_argument("--ignore-certificate-errors")
                     options.add_argument("--ignore-ssl-errors")
-                    #options.add_experimental_option("detach", True)
+                    # options.add_experimental_option("detach", True)
                     self.driver = webdriver.Remote(command_executor=general_data.remote_Machine,
                                                    desired_capabilities={'browserName': 'firefox',
                                                                          'javascriptEnabled': True})
@@ -89,7 +90,7 @@ class Test_LoginFlow:
                     options = webdriver.FirefoxOptions()
                     options.add_argument("--ignore-certificate-errors")
                     options.add_argument("--ignore-ssl-errors")
-                    #options.add_experimental_option("detach", True)
+                    # options.add_experimental_option("detach", True)
                     self.driver = webdriver.Remote(command_executor=general_data.remote_Machine,
                                                    desired_capabilities={'browserName': 'firefox',
                                                                          'javascriptEnabled': True})
@@ -110,7 +111,7 @@ class Test_LoginFlow:
                     options = webdriver.FirefoxOptions()
                     options.add_argument("--ignore-certificate-errors")
                     options.add_argument("--ignore-ssl-errors")
-                    #options.add_experimental_option("detach", True)
+                    # options.add_experimental_option("detach", True)
                     self.driver = webdriver.Chrome(options=options,
                                                    executable_path="../Browser_Drivers/OSX/geckodriver")
                     logging.debug("On Premise-OSX-Firefox Browser has been launched.")
@@ -129,7 +130,7 @@ class Test_LoginFlow:
                     options = webdriver.FirefoxOptions()
                     options.add_argument("--ignore-certificate-errors")
                     options.add_argument("--ignore-ssl-errors")
-                    #options.add_experimental_option("detach", True)
+                    # options.add_experimental_option("detach", True)
                     self.driver = webdriver.Chrome(options=options,
                                                    executable_path="../Browser_Drivers/Linux/geckodriver")
                     logging.debug("On Premise-Linux-Firefox Browser has been launched.")
@@ -148,7 +149,7 @@ class Test_LoginFlow:
                     options = webdriver.FirefoxOptions()
                     options.add_argument("--ignore-certificate-errors")
                     options.add_argument("--ignore-ssl-errors")
-                    #options.add_experimental_option("detach", True)
+                    # options.add_experimental_option("detach", True)
                     self.driver = webdriver.Chrome(options=options,
                                                    executable_path="../Browser_Drivers/Windows/geckodriver.exe")
                     logging.debug("On Premise-Windows-Firefox Browser has been launched.")
@@ -161,23 +162,41 @@ class Test_LoginFlow:
     @staticmethod
     def close_browser(self):
         self.driver.close()
-        logging.info("End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
+        logging.info(
+            "End:Internet Banking Reset Password Flow. FileName: Reset_Password.py, ClassName:Test_Reset_Password, TestName:test_Rest_Password")
 
-    def test_LoginFlow(self, startup):
+    def test_Rest_Password(self, startup):
 
         try:
             test_Login_data = TestData()
             login_data = test_Login_data.get_authentication_test_data()
 
             mobile_signIn_screen = Mobile_SignIn(self.driver)
-            mobile_signIn_screen.combined_user_name_password_enabled(login_data.loginFlow_UserName,
-                                                                     login_data.loginFlow_Password)
+            mobile_signIn_screen.click_reset_password_link()
+
             time.sleep(10)
 
-            mobile_dashboard = Mobile_Dashboard(self.driver)
-            mobile_dashboard.click_logout_btn()
+            mobile_retrieve_user_name = Mobile_ForgotPassword(self.driver)
+            mobile_retrieve_user_name.enter_rest_password_user_name_captcha(login_data.resetPassword_UserName,
+                                                                            "valid captcha")
+
+            time.sleep(10)
+
+            mobile_common = Mobile_Common(self.driver)
+            mobile_common.click_submit_btn()
+
+            time.sleep(10)
+
+            reset_password = Mobile_ForgotResetPassword(self.driver)
+            reset_password.enter_new_confirm_password(login_data.resetPassword_New_Confirm_Password)
+
+            time.sleep(10)
+
+            mobile_common = Mobile_Common(self.driver)
+            mobile_common.click_submit_btn()
 
             time.sleep(10)
 
         except Exception as e:
-            logging.error("ERROR: Issue in --test_LoginFlow() Method.--", e)
+            logging.error("ERROR: Issue in --test_Rest_Password() Method.--", e)
+
