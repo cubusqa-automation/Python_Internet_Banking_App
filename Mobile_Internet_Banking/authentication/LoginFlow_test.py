@@ -10,12 +10,10 @@ from Mobile_Internet_Banking.helper.TestData import *
 from Mobile_Internet_Banking.Object_Repository.Mobile_Object_Repository import *
 from selenium import webdriver
 
-"""
 logging.basicConfig(
     filename="../Logs/Authentication.log",
     format='%(asctime)s: %(levelname)s: %(message)s',
     level=logging.DEBUG)
-"""
 
 
 class Test_LoginFlow:
