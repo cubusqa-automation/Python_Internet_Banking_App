@@ -4,10 +4,10 @@ import pytest
 import logging
 import time
 
-sys.path.insert(0, os.getcwd())
+#sys.path.insert(0, os.getcwd())
 
 #sys.path.insert(0, os.path.join(os.getcwd(), '..', '..', '..'))
-#sys.path.insert(0, os.path.join(os.getcwd(), '..', '..'))
+#sys.path.insert(0, os.path.join(os.getcwd(), '..'))
 #sys.path.extend(["/Users/cubus/Documents/Work/Python_WorkPlace/Internet_Banking/Mobile_Internet_Banking/authentication/"])
 
 from Mobile_Internet_Banking.helper.TestData import *
