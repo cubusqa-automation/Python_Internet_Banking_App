@@ -1,7 +1,7 @@
 import pymongo
 import os
 
-from Mobile_Internet_Banking.helper.TestData_Properties import General_Properties, Authentication_Properties
+from Mobile_Internet_Banking.helper.TestData_Properties import *
 
 
 class TestData:
