@@ -4,13 +4,12 @@ import pytest
 import logging
 import time
 
-sys.path.insert(0, os.path.join(os.getcwd(), '..', '..', '..', '..'))
+sys.path.insert(0, os.path.join(os.getcwd(), '..', '..', '..'))
 #sys.path.insert(0, os.path.join(os.getcwd(), '..', '..'))
 
 from Mobile_Internet_Banking.helper.TestData import *
 from Mobile_Internet_Banking.Object_Repository.Mobile_Object_Repository import *
 from selenium import webdriver
-
 
 
 logging.basicConfig(
