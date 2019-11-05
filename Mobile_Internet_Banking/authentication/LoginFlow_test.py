@@ -164,8 +164,7 @@ class Test_LoginFlow:
     @staticmethod
     def close_browser(self):
         self.driver.close()
-
-    # logging.info("End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
+        # logging.info("End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow")
 
     def test_LoginFlow(self, startup):
 
