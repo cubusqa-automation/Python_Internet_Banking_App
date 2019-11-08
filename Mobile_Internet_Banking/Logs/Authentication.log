@@ -1168,3 +1168,181 @@
 2019-11-05 22:07:33,667: DEBUG: http://127.0.0.1:56065 "DELETE /session/5a3129ad01bcd494eb8397d7d6dde8b6/window HTTP/1.1" 200 12
 2019-11-05 22:07:33,669: DEBUG: Finished Request
 2019-11-05 22:07:33,672: INFO: End:Internet Banking Retrieve User Name Flow. FileName: Retrieve_UserName_test.py, ClassName:Test_Retrieve_UserName, TestName:test_Retrieve_UserName
+2019-11-08 19:06:27,608: INFO: Start:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow
+2019-11-08 19:06:28,632: DEBUG: POST http://127.0.0.1:49378/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}
+2019-11-08 19:06:28,633: DEBUG: Starting new HTTP connection (1): 127.0.0.1:49378
+2019-11-08 19:06:31,306: DEBUG: http://127.0.0.1:49378 "POST /session HTTP/1.1" 200 688
+2019-11-08 19:06:31,311: DEBUG: Finished Request
+2019-11-08 19:06:31,312: DEBUG: On Premise-OSX-Chrome Browser has been launched.
+2019-11-08 19:06:31,313: DEBUG: POST http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/window/maximize {}
+2019-11-08 19:06:31,452: DEBUG: http://127.0.0.1:49378 "POST /session/d0c217fed1f2eff019caa6b10b86c8e2/window/maximize HTTP/1.1" 200 50
+2019-11-08 19:06:31,453: DEBUG: Finished Request
+2019-11-08 19:06:31,453: DEBUG: POST http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/url {"url": "https://mobile.qa.cubusbank.com/Mobile/Authentication/SignIn.aspx"}
+2019-11-08 19:07:05,308: DEBUG: http://127.0.0.1:49378 "POST /session/d0c217fed1f2eff019caa6b10b86c8e2/url HTTP/1.1" 200 14
+2019-11-08 19:07:05,309: DEBUG: Finished Request
+2019-11-08 19:07:05,309: DEBUG: Internet Banking URL has been passed to the browser.
+2019-11-08 19:07:19,216: DEBUG: POST http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Textbox_UserName']"}
+2019-11-08 19:07:19,355: DEBUG: http://127.0.0.1:49378 "POST /session/d0c217fed1f2eff019caa6b10b86c8e2/element HTTP/1.1" 200 88
+2019-11-08 19:07:19,355: DEBUG: Finished Request
+2019-11-08 19:07:19,356: DEBUG: POST http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/element/c4232b0d-206b-4e9f-9ecc-34fc92ae8a63/value {"text": "Test24", "value": ["T", "e", "s", "t", "2", "4"], "id": "c4232b0d-206b-4e9f-9ecc-34fc92ae8a63"}
+2019-11-08 19:07:19,466: DEBUG: http://127.0.0.1:49378 "POST /session/d0c217fed1f2eff019caa6b10b86c8e2/element/c4232b0d-206b-4e9f-9ecc-34fc92ae8a63/value HTTP/1.1" 200 14
+2019-11-08 19:07:19,466: DEBUG: Finished Request
+2019-11-08 19:07:19,466: DEBUG: POST http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Text_Password']"}
+2019-11-08 19:07:19,478: DEBUG: http://127.0.0.1:49378 "POST /session/d0c217fed1f2eff019caa6b10b86c8e2/element HTTP/1.1" 200 88
+2019-11-08 19:07:19,478: DEBUG: Finished Request
+2019-11-08 19:07:19,479: DEBUG: POST http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/element/1eccbcb3-d7f5-43ce-b07d-e4bd32761961/value {"text": "Test@24", "value": ["T", "e", "s", "t", "@", "2", "4"], "id": "1eccbcb3-d7f5-43ce-b07d-e4bd32761961"}
+2019-11-08 19:07:19,554: DEBUG: http://127.0.0.1:49378 "POST /session/d0c217fed1f2eff019caa6b10b86c8e2/element/1eccbcb3-d7f5-43ce-b07d-e4bd32761961/value HTTP/1.1" 200 14
+2019-11-08 19:07:19,554: DEBUG: Finished Request
+2019-11-08 19:07:24,559: DEBUG: POST http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Button_DummySubmit']"}
+2019-11-08 19:07:24,580: DEBUG: http://127.0.0.1:49378 "POST /session/d0c217fed1f2eff019caa6b10b86c8e2/element HTTP/1.1" 200 88
+2019-11-08 19:07:24,580: DEBUG: Finished Request
+2019-11-08 19:07:24,580: DEBUG: POST http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/element/4b27dd0b-7e06-40a5-a769-72d993e62915/click {"id": "4b27dd0b-7e06-40a5-a769-72d993e62915"}
+2019-11-08 19:07:29,815: DEBUG: http://127.0.0.1:49378 "POST /session/d0c217fed1f2eff019caa6b10b86c8e2/element/4b27dd0b-7e06-40a5-a769-72d993e62915/click HTTP/1.1" 200 14
+2019-11-08 19:07:29,816: DEBUG: Finished Request
+2019-11-08 19:07:39,821: DEBUG: POST http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/element {"using": "xpath", "value": "/html[1]/body[1]/form[1]/div[3]/main[1]/div[1]/header[1]/div[1]/a[3]"}
+2019-11-08 19:07:39,905: DEBUG: http://127.0.0.1:49378 "POST /session/d0c217fed1f2eff019caa6b10b86c8e2/element HTTP/1.1" 404 1980
+2019-11-08 19:07:39,905: DEBUG: Finished Request
+2019-11-08 19:07:39,928: DEBUG: DELETE http://127.0.0.1:49378/session/d0c217fed1f2eff019caa6b10b86c8e2/window {}
+2019-11-08 19:07:40,039: DEBUG: http://127.0.0.1:49378 "DELETE /session/d0c217fed1f2eff019caa6b10b86c8e2/window HTTP/1.1" 200 12
+2019-11-08 19:07:40,039: DEBUG: Finished Request
+2019-11-08 19:07:40,040: INFO: End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow
+2019-11-08 19:07:43,903: INFO: Start:Internet Banking Reset Password Flow. FileName: Reset_Password.py, ClassName:Test_Reset_Password, TestName:test_Rest_Password
+2019-11-08 19:07:44,927: DEBUG: POST http://127.0.0.1:49412/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}
+2019-11-08 19:07:44,928: DEBUG: Starting new HTTP connection (1): 127.0.0.1:49412
+2019-11-08 19:07:46,397: DEBUG: http://127.0.0.1:49412 "POST /session HTTP/1.1" 200 688
+2019-11-08 19:07:46,399: DEBUG: Finished Request
+2019-11-08 19:07:46,399: DEBUG: On Premise-OSX-Chrome Browser has been launched.
+2019-11-08 19:07:46,399: DEBUG: POST http://127.0.0.1:49412/session/923ac59d89865b74129833ae1b53daed/window/maximize {}
+2019-11-08 19:07:46,537: DEBUG: http://127.0.0.1:49412 "POST /session/923ac59d89865b74129833ae1b53daed/window/maximize HTTP/1.1" 200 50
+2019-11-08 19:07:46,537: DEBUG: Finished Request
+2019-11-08 19:07:46,538: DEBUG: POST http://127.0.0.1:49412/session/923ac59d89865b74129833ae1b53daed/url {"url": "https://mobile.qa.cubusbank.com/Mobile/Authentication/SignIn.aspx"}
+2019-11-08 19:07:52,283: DEBUG: http://127.0.0.1:49412 "POST /session/923ac59d89865b74129833ae1b53daed/url HTTP/1.1" 200 14
+2019-11-08 19:07:52,284: DEBUG: Finished Request
+2019-11-08 19:07:52,285: DEBUG: Internet Banking URL has been passed to the browser.
+2019-11-08 19:08:05,705: DEBUG: POST http://127.0.0.1:49412/session/923ac59d89865b74129833ae1b53daed/element {"using": "xpath", "value": "//a[@id='ctl00_CPHSectionContent_Link_ForgotPassword']"}
+2019-11-08 19:08:05,723: DEBUG: http://127.0.0.1:49412 "POST /session/923ac59d89865b74129833ae1b53daed/element HTTP/1.1" 200 88
+2019-11-08 19:08:05,723: DEBUG: Finished Request
+2019-11-08 19:08:05,723: DEBUG: POST http://127.0.0.1:49412/session/923ac59d89865b74129833ae1b53daed/element/541ff1d5-0065-4ab0-a77b-d368387445f9/click {"id": "541ff1d5-0065-4ab0-a77b-d368387445f9"}
+2019-11-08 19:08:08,871: DEBUG: http://127.0.0.1:49412 "POST /session/923ac59d89865b74129833ae1b53daed/element/541ff1d5-0065-4ab0-a77b-d368387445f9/click HTTP/1.1" 200 14
+2019-11-08 19:08:08,872: DEBUG: Finished Request
+2019-11-08 19:08:18,878: DEBUG: POST http://127.0.0.1:49412/session/923ac59d89865b74129833ae1b53daed/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Textbox_Username']"}
+2019-11-08 19:08:18,898: DEBUG: http://127.0.0.1:49412 "POST /session/923ac59d89865b74129833ae1b53daed/element HTTP/1.1" 200 88
+2019-11-08 19:08:18,899: DEBUG: Finished Request
+2019-11-08 19:08:18,899: DEBUG: POST http://127.0.0.1:49412/session/923ac59d89865b74129833ae1b53daed/element/84bba94f-eccf-40fe-9c83-1791216b9d51/value {"text": "Test24", "value": ["T", "e", "s", "t", "2", "4"], "id": "84bba94f-eccf-40fe-9c83-1791216b9d51"}
+2019-11-08 19:08:18,989: DEBUG: http://127.0.0.1:49412 "POST /session/923ac59d89865b74129833ae1b53daed/element/84bba94f-eccf-40fe-9c83-1791216b9d51/value HTTP/1.1" 200 14
+2019-11-08 19:08:18,990: DEBUG: Finished Request
+2019-11-08 19:08:18,990: DEBUG: POST http://127.0.0.1:49412/session/923ac59d89865b74129833ae1b53daed/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Textbox_SecurityCode']"}
+2019-11-08 19:08:19,004: DEBUG: http://127.0.0.1:49412 "POST /session/923ac59d89865b74129833ae1b53daed/element HTTP/1.1" 404 1971
+2019-11-08 19:08:19,004: DEBUG: Finished Request
+2019-11-08 19:08:19,008: DEBUG: DELETE http://127.0.0.1:49412/session/923ac59d89865b74129833ae1b53daed/window {}
+2019-11-08 19:08:19,128: DEBUG: http://127.0.0.1:49412 "DELETE /session/923ac59d89865b74129833ae1b53daed/window HTTP/1.1" 200 12
+2019-11-08 19:08:19,128: DEBUG: Finished Request
+2019-11-08 19:08:19,129: INFO: End:Internet Banking Reset Password Flow. FileName: Reset_Password.py, ClassName:Test_Reset_Password, TestName:test_Rest_Password
+2019-11-08 19:08:22,498: INFO: Start:Internet Banking Retrieve User Name Flow. FileName: Retrieve_UserName_test.py, ClassName:Test_Retrieve_UserName, TestName:test_Retrieve_UserName
+2019-11-08 19:08:23,517: DEBUG: POST http://127.0.0.1:49450/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}
+2019-11-08 19:08:23,519: DEBUG: Starting new HTTP connection (1): 127.0.0.1:49450
+2019-11-08 19:08:24,823: DEBUG: http://127.0.0.1:49450 "POST /session HTTP/1.1" 200 688
+2019-11-08 19:08:24,824: DEBUG: Finished Request
+2019-11-08 19:08:24,825: DEBUG: On Premise-OSX-Chrome Browser has been launched.
+2019-11-08 19:08:24,825: DEBUG: POST http://127.0.0.1:49450/session/15073b0f341bb30a0c4a9fd4f7ce0a3b/window/maximize {}
+2019-11-08 19:08:24,961: DEBUG: http://127.0.0.1:49450 "POST /session/15073b0f341bb30a0c4a9fd4f7ce0a3b/window/maximize HTTP/1.1" 200 50
+2019-11-08 19:08:24,961: DEBUG: Finished Request
+2019-11-08 19:08:24,961: DEBUG: POST http://127.0.0.1:49450/session/15073b0f341bb30a0c4a9fd4f7ce0a3b/url {"url": "https://mobile.qa.cubusbank.com/Mobile/Authentication/SignIn.aspx"}
+2019-11-08 19:08:30,606: DEBUG: http://127.0.0.1:49450 "POST /session/15073b0f341bb30a0c4a9fd4f7ce0a3b/url HTTP/1.1" 200 14
+2019-11-08 19:08:30,606: DEBUG: Finished Request
+2019-11-08 19:08:30,607: DEBUG: Internet Banking URL has been passed to the browser.
+2019-11-08 19:08:41,646: DEBUG: POST http://127.0.0.1:49450/session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element {"using": "xpath", "value": "//a[@id='ctl00_CPHSectionContent_Link_ForgotUserName']"}
+2019-11-08 19:08:41,665: DEBUG: http://127.0.0.1:49450 "POST /session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element HTTP/1.1" 200 88
+2019-11-08 19:08:41,665: DEBUG: Finished Request
+2019-11-08 19:08:41,666: DEBUG: POST http://127.0.0.1:49450/session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element/205587d5-564f-49bd-98ec-c63d8144d26c/click {"id": "205587d5-564f-49bd-98ec-c63d8144d26c"}
+2019-11-08 19:08:44,075: DEBUG: http://127.0.0.1:49450 "POST /session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element/205587d5-564f-49bd-98ec-c63d8144d26c/click HTTP/1.1" 200 14
+2019-11-08 19:08:44,075: DEBUG: Finished Request
+2019-11-08 19:08:54,076: DEBUG: POST http://127.0.0.1:49450/session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Textbox_MemberNo']"}
+2019-11-08 19:08:54,091: DEBUG: http://127.0.0.1:49450 "POST /session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element HTTP/1.1" 200 88
+2019-11-08 19:08:54,092: DEBUG: Finished Request
+2019-11-08 19:08:54,092: DEBUG: POST http://127.0.0.1:49450/session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element/9b5c029e-1458-4615-848c-bdb877d07ce0/value {"text": "750024", "value": ["7", "5", "0", "0", "2", "4"], "id": "9b5c029e-1458-4615-848c-bdb877d07ce0"}
+2019-11-08 19:08:54,178: DEBUG: http://127.0.0.1:49450 "POST /session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element/9b5c029e-1458-4615-848c-bdb877d07ce0/value HTTP/1.1" 200 14
+2019-11-08 19:08:54,179: DEBUG: Finished Request
+2019-11-08 19:08:54,179: DEBUG: POST http://127.0.0.1:49450/session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Textbox_SecurityCode']"}
+2019-11-08 19:08:54,193: DEBUG: http://127.0.0.1:49450 "POST /session/15073b0f341bb30a0c4a9fd4f7ce0a3b/element HTTP/1.1" 404 1971
+2019-11-08 19:08:54,194: DEBUG: Finished Request
+2019-11-08 19:08:54,198: DEBUG: DELETE http://127.0.0.1:49450/session/15073b0f341bb30a0c4a9fd4f7ce0a3b/window {}
+2019-11-08 19:08:54,281: DEBUG: http://127.0.0.1:49450 "DELETE /session/15073b0f341bb30a0c4a9fd4f7ce0a3b/window HTTP/1.1" 200 12
+2019-11-08 19:08:54,282: DEBUG: Finished Request
+2019-11-08 19:08:54,283: INFO: End:Internet Banking Retrieve User Name Flow. FileName: Retrieve_UserName_test.py, ClassName:Test_Retrieve_UserName, TestName:test_Retrieve_UserName
+2019-11-08 19:18:22,985: INFO: Start:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow
+2019-11-08 19:18:24,002: DEBUG: POST http://127.0.0.1:49493/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}
+2019-11-08 19:18:24,003: DEBUG: Starting new HTTP connection (1): 127.0.0.1:49493
+2019-11-08 19:18:25,998: DEBUG: http://127.0.0.1:49493 "POST /session HTTP/1.1" 200 688
+2019-11-08 19:18:26,006: DEBUG: Finished Request
+2019-11-08 19:18:26,007: DEBUG: On Premise-OSX-Chrome Browser has been launched.
+2019-11-08 19:18:26,007: DEBUG: POST http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/window/maximize {}
+2019-11-08 19:18:26,141: DEBUG: http://127.0.0.1:49493 "POST /session/23cdc2ac8715e19777de8df69090b82a/window/maximize HTTP/1.1" 200 50
+2019-11-08 19:18:26,141: DEBUG: Finished Request
+2019-11-08 19:18:26,142: DEBUG: POST http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/url {"url": "https://mobile.qa.cubusbank.com/Mobile/Authentication/SignIn.aspx"}
+2019-11-08 19:18:33,082: DEBUG: http://127.0.0.1:49493 "POST /session/23cdc2ac8715e19777de8df69090b82a/url HTTP/1.1" 200 14
+2019-11-08 19:18:33,083: DEBUG: Finished Request
+2019-11-08 19:18:33,083: DEBUG: Internet Banking URL has been passed to the browser.
+2019-11-08 19:18:47,049: DEBUG: POST http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Textbox_UserName']"}
+2019-11-08 19:18:47,067: DEBUG: http://127.0.0.1:49493 "POST /session/23cdc2ac8715e19777de8df69090b82a/element HTTP/1.1" 200 88
+2019-11-08 19:18:47,067: DEBUG: Finished Request
+2019-11-08 19:18:47,067: DEBUG: POST http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/element/24278d0a-ad78-4854-a91e-1edfd801ba8a/value {"text": "Test24", "value": ["T", "e", "s", "t", "2", "4"], "id": "24278d0a-ad78-4854-a91e-1edfd801ba8a"}
+2019-11-08 19:18:47,181: DEBUG: http://127.0.0.1:49493 "POST /session/23cdc2ac8715e19777de8df69090b82a/element/24278d0a-ad78-4854-a91e-1edfd801ba8a/value HTTP/1.1" 200 14
+2019-11-08 19:18:47,181: DEBUG: Finished Request
+2019-11-08 19:18:47,181: DEBUG: POST http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Text_Password']"}
+2019-11-08 19:18:47,194: DEBUG: http://127.0.0.1:49493 "POST /session/23cdc2ac8715e19777de8df69090b82a/element HTTP/1.1" 200 88
+2019-11-08 19:18:47,195: DEBUG: Finished Request
+2019-11-08 19:18:47,195: DEBUG: POST http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/element/48c506b4-a311-4ba0-b2a1-74ca4ddb1b36/value {"text": "Test@24", "value": ["T", "e", "s", "t", "@", "2", "4"], "id": "48c506b4-a311-4ba0-b2a1-74ca4ddb1b36"}
+2019-11-08 19:18:47,277: DEBUG: http://127.0.0.1:49493 "POST /session/23cdc2ac8715e19777de8df69090b82a/element/48c506b4-a311-4ba0-b2a1-74ca4ddb1b36/value HTTP/1.1" 200 14
+2019-11-08 19:18:47,278: DEBUG: Finished Request
+2019-11-08 19:18:52,280: DEBUG: POST http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Button_DummySubmit']"}
+2019-11-08 19:18:52,294: DEBUG: http://127.0.0.1:49493 "POST /session/23cdc2ac8715e19777de8df69090b82a/element HTTP/1.1" 200 88
+2019-11-08 19:18:52,294: DEBUG: Finished Request
+2019-11-08 19:18:52,295: DEBUG: POST http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/element/380ce3ac-8dc7-4a96-9f23-b98db94c0098/click {"id": "380ce3ac-8dc7-4a96-9f23-b98db94c0098"}
+2019-11-08 19:18:52,366: DEBUG: http://127.0.0.1:49493 "POST /session/23cdc2ac8715e19777de8df69090b82a/element/380ce3ac-8dc7-4a96-9f23-b98db94c0098/click HTTP/1.1" 200 14
+2019-11-08 19:18:52,366: DEBUG: Finished Request
+2019-11-08 19:19:02,372: DEBUG: POST http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/element {"using": "xpath", "value": "/html[1]/body[1]/form[1]/div[3]/main[1]/div[1]/header[1]/div[1]/a[3]"}
+2019-11-08 19:19:02,390: DEBUG: http://127.0.0.1:49493 "POST /session/23cdc2ac8715e19777de8df69090b82a/element HTTP/1.1" 404 1980
+2019-11-08 19:19:02,390: DEBUG: Finished Request
+2019-11-08 19:19:02,452: DEBUG: DELETE http://127.0.0.1:49493/session/23cdc2ac8715e19777de8df69090b82a/window {}
+2019-11-08 19:19:02,563: DEBUG: http://127.0.0.1:49493 "DELETE /session/23cdc2ac8715e19777de8df69090b82a/window HTTP/1.1" 200 12
+2019-11-08 19:19:02,563: DEBUG: Finished Request
+2019-11-08 19:19:02,564: INFO: End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow
+2019-11-08 19:20:39,995: INFO: Start:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow
+2019-11-08 19:20:41,015: DEBUG: POST http://127.0.0.1:49530/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"detach": true, "extensions": [], "args": ["--ignore-certificate-errors", "--ignore-ssl-errors"]}}}
+2019-11-08 19:20:41,016: DEBUG: Starting new HTTP connection (1): 127.0.0.1:49530
+2019-11-08 19:20:43,540: DEBUG: http://127.0.0.1:49530 "POST /session HTTP/1.1" 200 688
+2019-11-08 19:20:43,541: DEBUG: Finished Request
+2019-11-08 19:20:43,541: DEBUG: On Premise-OSX-Chrome Browser has been launched.
+2019-11-08 19:20:43,542: DEBUG: POST http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/window/maximize {}
+2019-11-08 19:20:43,684: DEBUG: http://127.0.0.1:49530 "POST /session/f31ec802058ba5c5d6b2eaa92899fff3/window/maximize HTTP/1.1" 200 50
+2019-11-08 19:20:43,685: DEBUG: Finished Request
+2019-11-08 19:20:43,686: DEBUG: POST http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/url {"url": "https://mobile.qa.cubusbank.com/Mobile/Authentication/SignIn.aspx"}
+2019-11-08 19:20:49,466: DEBUG: http://127.0.0.1:49530 "POST /session/f31ec802058ba5c5d6b2eaa92899fff3/url HTTP/1.1" 200 14
+2019-11-08 19:20:49,466: DEBUG: Finished Request
+2019-11-08 19:20:49,466: DEBUG: Internet Banking URL has been passed to the browser.
+2019-11-08 19:21:03,443: DEBUG: POST http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Textbox_UserName']"}
+2019-11-08 19:21:03,472: DEBUG: http://127.0.0.1:49530 "POST /session/f31ec802058ba5c5d6b2eaa92899fff3/element HTTP/1.1" 200 88
+2019-11-08 19:21:03,472: DEBUG: Finished Request
+2019-11-08 19:21:03,472: DEBUG: POST http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/element/218cb76f-56d1-4c61-8e84-0fb41908712a/value {"text": "Test24", "value": ["T", "e", "s", "t", "2", "4"], "id": "218cb76f-56d1-4c61-8e84-0fb41908712a"}
+2019-11-08 19:21:03,598: DEBUG: http://127.0.0.1:49530 "POST /session/f31ec802058ba5c5d6b2eaa92899fff3/element/218cb76f-56d1-4c61-8e84-0fb41908712a/value HTTP/1.1" 200 14
+2019-11-08 19:21:03,599: DEBUG: Finished Request
+2019-11-08 19:21:03,599: DEBUG: POST http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Text_Password']"}
+2019-11-08 19:21:03,610: DEBUG: http://127.0.0.1:49530 "POST /session/f31ec802058ba5c5d6b2eaa92899fff3/element HTTP/1.1" 200 88
+2019-11-08 19:21:03,611: DEBUG: Finished Request
+2019-11-08 19:21:03,611: DEBUG: POST http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/element/8db1d046-6044-458a-8767-90877395a4ce/value {"text": "Test@24", "value": ["T", "e", "s", "t", "@", "2", "4"], "id": "8db1d046-6044-458a-8767-90877395a4ce"}
+2019-11-08 19:21:03,689: DEBUG: http://127.0.0.1:49530 "POST /session/f31ec802058ba5c5d6b2eaa92899fff3/element/8db1d046-6044-458a-8767-90877395a4ce/value HTTP/1.1" 200 14
+2019-11-08 19:21:03,689: DEBUG: Finished Request
+2019-11-08 19:21:08,691: DEBUG: POST http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/element {"using": "xpath", "value": "//input[@id='ctl00_CPHSectionContent_Button_DummySubmit']"}
+2019-11-08 19:21:08,721: DEBUG: http://127.0.0.1:49530 "POST /session/f31ec802058ba5c5d6b2eaa92899fff3/element HTTP/1.1" 200 88
+2019-11-08 19:21:08,721: DEBUG: Finished Request
+2019-11-08 19:21:08,721: DEBUG: POST http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/element/bc4055fe-c401-425b-a04f-8ced52be9603/click {"id": "bc4055fe-c401-425b-a04f-8ced52be9603"}
+2019-11-08 19:21:08,839: DEBUG: http://127.0.0.1:49530 "POST /session/f31ec802058ba5c5d6b2eaa92899fff3/element/bc4055fe-c401-425b-a04f-8ced52be9603/click HTTP/1.1" 200 14
+2019-11-08 19:21:08,839: DEBUG: Finished Request
+2019-11-08 19:21:18,841: DEBUG: POST http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/element {"using": "xpath", "value": "/html[1]/body[1]/form[1]/div[3]/main[1]/div[1]/header[1]/div[1]/a[3]"}
+2019-11-08 19:21:18,857: DEBUG: http://127.0.0.1:49530 "POST /session/f31ec802058ba5c5d6b2eaa92899fff3/element HTTP/1.1" 404 1980
+2019-11-08 19:21:18,857: DEBUG: Finished Request
+2019-11-08 19:21:18,878: DEBUG: DELETE http://127.0.0.1:49530/session/f31ec802058ba5c5d6b2eaa92899fff3/window {}
+2019-11-08 19:21:18,988: DEBUG: http://127.0.0.1:49530 "DELETE /session/f31ec802058ba5c5d6b2eaa92899fff3/window HTTP/1.1" 200 12
+2019-11-08 19:21:18,989: DEBUG: Finished Request
+2019-11-08 19:21:18,989: INFO: End:Internet Banking Login Work Flow. FileName: LoginFlow_test.py, ClassName:Test_LoginFlow, TestName:test_LoginFlow
