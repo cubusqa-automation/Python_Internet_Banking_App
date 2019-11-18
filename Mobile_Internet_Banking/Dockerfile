@@ -4,5 +4,5 @@ COPY . /Mobile_Internet_Banking
 ADD requirements.txt /Mobile_Internet_Banking/requirements.txt
 RUN pip install -r /Mobile_Internet_Banking/requirements.txt
 WORKDIR /Mobile_Internet_Banking/authentication
-ENTRYPOINT ["py.test"]
+ENTRYPOINT ["pytest"]
 CMD [--alluredir=/var/lib/jenkins/workspace/CubusQA_Mobile_Automation/Allure_Report"]
