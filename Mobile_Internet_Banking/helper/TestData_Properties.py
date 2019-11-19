@@ -1,6 +1,7 @@
 class General_Properties:
     mongodb_connection_string = "mongodb+srv://cubusqa-automation:!Cu2010bus@cluster0-1hi04.mongodb.net/test?retryWrites=true&w=majority"
 
+    report_Machine = None
     deployment_Type = None
     deployment_Environment = None
     remote_Machine = None

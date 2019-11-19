@@ -16,6 +16,7 @@ class TestData:
             mongodb_collection = mongodb_database.Collection_QABox_TestData
             general_data = dict(mongodb_collection.find_one({'key': 'general_TestData'}))
 
+            general_Test_Data.report_Machine = general_data.get("report_Machine").lower()
             general_Test_Data.deployment_Type = general_data.get("deployment_Type").lower()
             general_Test_Data.deployment_Environment = general_data.get("deployment_Environment").lower()
             general_Test_Data.remote_Machine = general_data.get("remote_Machine")
