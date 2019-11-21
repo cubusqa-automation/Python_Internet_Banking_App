@@ -159,5 +159,7 @@ class Test_Zalenium_TransferResult:
         self.driver.find_element_by_xpath("//input[@id='j_username']").send_keys("superadmin")
         self.driver.find_element_by_xpath("//input[@placeholder='Password']").send_keys("@Cu2010bus")
         self.driver.find_element_by_xpath("//input[@name='Submit']").click()
+
         time.sleep(60)
+
         print("-----", self.driver.title, "-----")
