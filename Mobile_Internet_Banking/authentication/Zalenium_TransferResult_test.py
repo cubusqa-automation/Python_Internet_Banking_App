@@ -152,8 +152,9 @@ class Test_Zalenium_TransferResult:
 
     def test_TransferResult_Container_Server(self, startup):
 
-        time.sleep(30)
-
+        time.sleep(60)
+        """
+        
         self.driver.maximize_window()
         self.driver.get("http://192.168.200.170:8001/job/FT_Container_Server/build?token=FT_Container_Server")
         self.driver.find_element_by_xpath("//input[@id='j_username']").send_keys("superadmin")
@@ -161,3 +162,4 @@ class Test_Zalenium_TransferResult:
         self.driver.find_element_by_xpath("//input[@name='Submit']").click()
         time.sleep(30)
         print("-----", self.driver.title, "-----")
+        """
