@@ -151,7 +151,7 @@ class Test_Zalenium_TransferResult:
         self.driver.close()
 
     def test_TransferResult_Container_Server(self, startup):
-
+        """
         time.sleep(60)
 
         self.driver.maximize_window()
@@ -163,3 +163,4 @@ class Test_Zalenium_TransferResult:
         time.sleep(60)
 
         print("-----", self.driver.title, "-----")
+        """
