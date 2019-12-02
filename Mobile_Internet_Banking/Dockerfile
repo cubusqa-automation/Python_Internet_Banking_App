@@ -5,4 +5,4 @@ ADD requirements.txt /Mobile_Internet_Banking/requirements.txt
 RUN pip install -r /Mobile_Internet_Banking/requirements.txt
 WORKDIR /Mobile_Internet_Banking/authentication
 ENTRYPOINT ["pytest"]
-CMD ["-v", "-s","-n 3" "--alluredir=/Mobile_Internet_Banking/Allure_Result"]
+CMD ["-v", "-s","-n 3", "--alluredir=/Mobile_Internet_Banking/Allure_Result"]
